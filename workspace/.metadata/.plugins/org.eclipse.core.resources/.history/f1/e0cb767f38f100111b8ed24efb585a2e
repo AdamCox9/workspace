@@ -1,0 +1,652 @@
+package com.adamcox.rapbeatspro;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.sql.Timestamp;
+import java.util.Date;
+
+import com.adamcox.rapbeats.database.DatabaseAdapter;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.MediaRecorder;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.graphics.Bitmap;
+
+/*
+ * 
+ * This will be loaded each time a song is clicked.
+ * It will check the FileSystem for file and either download it if it don't exist or play it if it does exist...
+ * 
+ * 
+ */
+
+public class MP3Downloader extends Activity {
+	private MP3Downloader me = this;
+	
+	private Services services = new Services();
+	private MediaPlayer mPlayer = null;
+    private MediaRecorder mRecorder = null;
+	private DatabaseAdapter databaseAdapter;
+
+    private TextView tv;
+
+	private TextView mText;
+    private String Title;
+
+	private String path; //Path to where files are saved...
+    private String FileName;
+
+    ImageView playButton;
+    ImageView pauseButton;
+    ImageView stopButton;
+    ImageView recordButton;
+    ImageView play_recordingButton;
+    ImageView stop_recordingButton;
+    ImageView saveButton;
+    ImageView shareButton;
+    ImageView redownloadButton;
+
+	private Date date;
+	private Timestamp Ts;
+	private long timestamp;
+
+    private String rapUrl = "http://c15007487.r87.cf2.rackcdn.com/";
+    
+   
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Bundle extras = getIntent().getExtras();
+
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        
+        if(extras !=null) {
+        	Title = extras.getString("Title");
+        	FileName = extras.getString("FileName");
+
+            //Toast.makeText(MP3Downloader.this, FileName, Toast.LENGTH_LONG).show();
+
+            //We should do this only in the free version...
+        	if( FileName.equals( "battle" ) || FileName.equals( "irish_beat" ) || FileName.equals( "pass_the_dutch" ) ) {
+
+	        	//Need to check if this file is here or not...
+                if ( Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) ) {
+		            File externalDir = Environment.getExternalStorageDirectory();
+			        path = externalDir.getAbsolutePath() + File.separator + "Android" + File.separator + "data" + File.separator + me.getResources().getString(R.string.app_version) +  File.separator;
+		            File file = new File( path );
+		            file.mkdirs();
+                } else {
+	        		//We still need path set-up: (this should change based on if there is SD card or not...
+		            File internalDir = Environment.getDataDirectory();
+			        path = internalDir.getAbsolutePath() + File.separator + "data" + File.separator + me.getResources().getString(R.string.app_version) +  File.separator + "files" + File.separator;
+		            File file = new File( path );
+		            file.mkdirs();
+                }
+        		setContentView(R.layout.media);
+                setUpTitle();
+                setUpButtons();
+        	} else {
+	            File t_file = new File( FileName );
+	
+	            /*
+	             * 
+	             * Case True: FileName is full path to file...
+	             * Case False: FileName is a name of a file in default directory...
+	             * Need to handle both of these cases all throughout...
+	             * 
+	             */
+	            
+	        	if( t_file.exists() ) {
+	        		path = t_file.getParent() +  File.separator;
+	        		FileName = t_file.getName();
+	
+	        		setContentView(R.layout.media);
+	                setUpTitle();
+	                setUpButtons();
+	                
+	        	} else {
+	
+		        	//Need to check if this file is here or not...
+	                if ( Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) ) {
+	                	
+	                	/*
+	                	 * Handle External Storage
+	                	 */
+	                	
+			            File externalDir = Environment.getExternalStorageDirectory();
+				        path = externalDir.getAbsolutePath() + File.separator + "Android" + File.separator + "data" + File.separator + me.getResources().getString(R.string.app_version) +  File.separator;
+				
+			            File file = new File( path );
+			            file.mkdirs();
+			            file = new File( path + FileName );
+		
+			        	if ( ! file.exists() ) {
+			        		setContentView( R.layout.download );
+			                mText = (TextView) findViewById(R.id.textBar1);
+			        		services.execute(FileName);
+			        	} else {
+			                setContentView(R.layout.media);
+			                setUpTitle();
+			                setUpButtons();
+			        	}
+			        	
+	                } else {
+	                	
+	                	/*
+	                	 * Handle Internal Storage
+	                	 */
+	                	
+			            File internalDir = Environment.getDataDirectory();
+			            
+				        path = internalDir.getAbsolutePath() + File.separator + "data" + File.separator + me.getResources().getString(R.string.app_version) +  File.separator + "files" + File.separator;
+	
+		                //Toast.makeText(MP3Downloader.this, path, Toast.LENGTH_LONG).show();
+	
+		        	    try {
+				            File file = new File( path );
+				            file.mkdirs();
+				            file = new File( path + FileName );
+				        	if ( ! file.exists() ) {
+				        		setContentView( R.layout.download );
+				                mText = (TextView) findViewById(R.id.textBar1);
+				        		services.execute(FileName);
+				        	} else {
+				                setContentView(R.layout.media);
+				                setUpTitle();
+				                setUpButtons();
+				        	}
+		        	    } catch(Exception e) {
+			                Log.d("MP3Downloader", e.getMessage());
+		        	    }
+		
+	                }
+		        }
+        	}
+        	
+        } else {
+        	Log.d( "MP3Downloader", "Could not get Extras" );
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+    	super.onResume();
+    	
+    	databaseAdapter = new DatabaseAdapter(this);
+    	databaseAdapter.open();
+
+    	if (mPlayer != null) {
+            mPlayer.setVolume(10, 10);
+            mPlayer.start();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        pausePlayer();
+
+        databaseAdapter.close();
+
+        stopRecording();
+    }
+    
+    @Override
+    public void onStop()
+    {
+    	super.onStop();
+    	stopRecording();
+    }
+    
+    @Override
+    public void onDestroy()
+    {
+    	super.onDestroy();
+
+    	stopRecording();
+    }
+    
+    protected void setUpTitle()
+    {
+        tv = (TextView) findViewById(R.id.song_title);
+        tv.setText(Title);
+    }
+
+    protected void setUpButtons()
+    {
+        playButton = (ImageView) findViewById(R.id.play);
+        pauseButton = (ImageView) findViewById(R.id.pause);
+        stopButton = (ImageView) findViewById(R.id.stop);
+        recordButton = (ImageView) findViewById(R.id.record);
+        play_recordingButton = (ImageView) findViewById(R.id.play_recording);
+        stop_recordingButton = (ImageView) findViewById(R.id.stop_recording);
+        saveButton = (ImageView) findViewById(R.id.save);
+        shareButton = (ImageView) findViewById(R.id.share);
+        redownloadButton = (ImageView) findViewById(R.id.redownload);
+
+        
+        playButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Toast.makeText(MP3Downloader.this, "Play", Toast.LENGTH_SHORT).show();
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	startPlaying();
+            }
+        });
+
+        pauseButton.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View view) {
+                Toast.makeText(MP3Downloader.this, "Pause", Toast.LENGTH_SHORT).show();
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	pausePlayer();
+            }
+        });
+        
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Toast.makeText(MP3Downloader.this, "Stop", Toast.LENGTH_SHORT).show();
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	stopPlaying();
+            }
+        });
+        
+        recordButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Toast.makeText(MP3Downloader.this, "Recording", Toast.LENGTH_SHORT).show();
+            	recordButton.setImageResource(R.drawable.record_active);
+            	stopRecording(); 
+            	stopPlaying();
+            	startRecording();
+                startPlaying();
+            }
+        });
+
+        play_recordingButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Toast.makeText(MP3Downloader.this, "Play Recording", Toast.LENGTH_SHORT).show();
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	stopPlaying();
+            	playRecording();
+            }
+        });
+
+        stop_recordingButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Toast.makeText(MP3Downloader.this, "Stop Recording", Toast.LENGTH_SHORT).show();
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	stopPlaying();
+            }
+        });
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	stopPlaying();
+                //Make sure that there is a lyrics file for the instrumentals file...
+            	if( testRecordingFileExists() ) {
+            		if( insertRap() && CopyFile() ) {
+                        Toast.makeText(MP3Downloader.this, "Rap Saved", Toast.LENGTH_SHORT).show();
+            		}
+            	} else {
+                    Toast.makeText(MP3Downloader.this, "Please Create Lyrics", Toast.LENGTH_SHORT).show();
+            	}
+                //@Todo Prompt user for title
+                //Insert entry into database...
+            }
+        });
+
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+            	recordButton.setImageResource(R.drawable.record);
+            	stopRecording();
+            	stopPlaying();
+
+            	Intent intent = new Intent(Intent.ACTION_SEND);
+            	intent.setType("text/plain");
+            	intent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=" + me.getResources().getString(R.string.app_version) );
+            	startActivity(Intent.createChooser(intent, "Share with"));
+            	
+            }
+        });
+
+        redownloadButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+            	//Should make the user confirm!!!
+            	
+            	stopRecording();
+            	stopPlaying();
+            	
+            	//Delete current file...
+                File file = new File( path + FileName );
+            	
+            	if ( file.exists() ) {
+            		file.delete();
+            	}
+
+            	//Start new activity just like this one...
+            	Intent intent = new Intent(me, MP3Downloader.class);
+        		intent.putExtra("Title",Title);
+        		intent.putExtra("FileName",FileName);
+            	startActivity(intent);
+
+            	//Finish this current activity...
+            	me.finish();
+            	
+            }
+        });
+    }
+
+    //Used for saving
+    protected boolean CopyFile(){
+    	try{
+    		File f1 = new File(path + "r_" + FileName);
+    		File f2 = new File(path + "r_" + timestamp + FileName);
+    		InputStream in = new FileInputStream(f1);
+
+    		//For Overwrite the file.
+    		OutputStream out = new FileOutputStream(f2);
+
+    		byte[] buf = new byte[1024];
+    		int len;
+    		while ((len = in.read(buf)) > 0) {
+    			out.write(buf, 0, len);
+    		}
+    		in.close();
+    		out.close();
+    		return true;
+    	}
+    	catch(FileNotFoundException ex){
+			Log.d("MP3Downloader", "Error 2: " + ex );
+    	}
+    	catch(IOException e){
+			Log.d("MP3Downloader", "Error 3: " + e );
+    	}
+    	return false;
+    }
+    
+    //Save to play later...
+    private boolean insertRap() {
+    	date= new Date();
+    	Ts = new Timestamp(date.getTime());
+    	timestamp = Ts.getTime();
+    	if( databaseAdapter.createEntry(Title, path+FileName, path + "r_" + timestamp + FileName) == -1 ) {
+            //Toast.makeText(MP3Downloader.this, "Database Error", Toast.LENGTH_SHORT).show();
+	    	return false;
+	    } else {
+	    	return true;
+	    }
+    }
+    
+    /**
+     * Helper function to ensure there is a recorded file before saving...
+     * 
+     * @return
+     */
+    private boolean testRecordingFileExists() {
+        File r_file = new File( path + "r_" + FileName );
+    	
+    	if ( ! r_file.exists() ) {
+    		return false;
+    	} else {
+    		return true;
+    	}
+    }
+    
+    private void PlayMP3( String FileName ) {
+    	Log.d("MP3Downloader", "playing: " + FileName );
+    	
+    	try {
+	    	if( FileName.equals( "battle" ) ) {
+	    		mPlayer = MediaPlayer.create(this, R.raw.battle);
+	            mPlayer.setLooping(false);
+	            mPlayer.setVolume(10, 10);
+	            mPlayer.start();
+		        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+		        	public void onCompletion(MediaPlayer mp) {
+		            	recordButton.setImageResource(R.drawable.record);
+		            	stopRecording();
+		        	}
+		        });
+	    	} else if( FileName.equals( "irish_beat" ) ) {
+	    		mPlayer = MediaPlayer.create(this, R.raw.irish_beat);
+	            mPlayer.setLooping(false);
+	            mPlayer.setVolume(10, 10);
+	            mPlayer.start();
+		        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+		        	public void onCompletion(MediaPlayer mp) {
+		            	recordButton.setImageResource(R.drawable.record);
+		            	stopRecording();
+		        	}
+		        });
+	    	} else if( FileName.equals( "pass_the_dutch" ) ) {
+	    		mPlayer = MediaPlayer.create(this, R.raw.pass_the_dutch);
+	            mPlayer.setLooping(false);
+	            mPlayer.setVolume(10, 10);
+	            mPlayer.start();
+		        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+		        	public void onCompletion(MediaPlayer mp) {
+		            	recordButton.setImageResource(R.drawable.record);
+		            	stopRecording();
+		        	}
+		        });
+	    	} else {
+		        mPlayer = new MediaPlayer();
+		
+		        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+		        	public void onCompletion(MediaPlayer mp) {
+		            	recordButton.setImageResource(R.drawable.record);
+		            	stopRecording();
+		        	}
+		        });
+		        
+		        File file = new File( path + FileName );
+		        
+		        FileInputStream fis;
+	
+		        fis = new FileInputStream(file);
+	            mPlayer.setDataSource(fis.getFD());
+	            mPlayer.prepare();
+	            mPlayer.setLooping(false);
+	            mPlayer.setVolume(10, 10);
+	            mPlayer.start();
+			}
+	    } catch (Exception e) {
+	        Log.e("MP3Downloader", "Play MP3 Failed" + e.getMessage() );
+			e.printStackTrace();
+	    }
+    }
+
+    private void stopPlaying() {
+    	if( mPlayer != null ) {
+    		mPlayer.release();
+    		mPlayer = null;
+    	}
+    }
+
+    private void startPlaying() {
+    	if( mPlayer == null ) {
+    		PlayMP3( FileName );
+    	} else {
+            mPlayer.setVolume(10, 10);
+    		mPlayer.start();
+    	}
+    }
+
+    private void pausePlayer() {
+        if (mPlayer != null) {
+            mPlayer.pause();
+            if (isFinishing()) {
+                mPlayer.stop();
+                mPlayer.release();
+            }
+        }
+    }
+    
+    private void startRecording() {
+
+	    try {
+	        int version = android.os.Build.VERSION.SDK_INT;
+
+	    	mRecorder = new MediaRecorder();
+	        mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+
+	        /*
+	         * Todo upgrade to API 16 and make some more virtual devices for testing...
+	         */
+	        if( version >= 16 ) {
+	        	//use AAC_ADTS at 96 kHz
+	        } else if( version >=10 ) {
+	        	//use AMR_NB at 16 kHz
+	        } else if( version >= 8 ){
+	        	//use RAW_AMR at 8 kHz
+	        } else { //version == 7 (lowest supported version)
+	        	
+	        }
+	        
+	        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+	        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+
+	        File m_file = new File( path + "r_" + FileName );
+	        if( m_file.exists() ) {
+	        	m_file.delete();
+	        }
+	        mRecorder.setOutputFile( path + "r_" + FileName );
+	
+	        
+	        if( version >= 8 ) {
+		        //mRecorder.setAudioEncodingBitRate(16);
+		        //mRecorder.setAudioSamplingRate(44100);
+		        //mRecorder.setAudioChannels(1);
+	        }
+	        
+	        mRecorder.prepare();
+	        mRecorder.start();
+	    } catch (Exception e) {
+	        Log.e("MP3Downloader", "MediaRecorder Failed: " + e.getMessage() );
+			e.printStackTrace();
+	    }
+    }
+
+    
+    private void playRecording() {
+		PlayMP3( "r_" + FileName );
+		try {
+			Thread.sleep(250);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PlayMP3( FileName );
+    }
+    
+    private void stopRecording() {
+    	if( mRecorder != null ) {
+    		mRecorder.release();
+    		mRecorder = null;
+    	}
+    }
+
+    /**
+     * This class handles the downloading of the song and display's the progress bar with KB downloaded so far...
+     * @author Adam
+     *
+     */
+    public class Services extends AsyncTask<String, Integer, Bitmap> {
+    	String fileName;
+
+    	@Override
+        protected void onPostExecute(Bitmap bm) {
+            setContentView(R.layout.media);
+            setUpTitle();
+            setUpButtons();
+        }
+
+    	@Override
+        protected void onProgressUpdate(Integer... progress) {
+    		//Log.d("Download Progress", progress[0] + " KB downloaded" );
+    		mText.setText(progress[0] + "KB of " + progress[1] + "KB downloaded");
+        }
+    	
+    	@Override
+    	protected Bitmap doInBackground(String... _fileName) {
+        
+    		fileName = _fileName[0];
+
+        	try {
+
+        		URL u = new URL( rapUrl + fileName); //you can write here any link
+        		HttpURLConnection c = (HttpURLConnection) u.openConnection();
+        		c.setRequestMethod("GET");
+        	    c.setDoOutput(false);
+        	    c.connect();
+        	    
+        	    int ContentLength = c.getContentLength();
+
+        	    FileOutputStream f = new FileOutputStream(new File( path, fileName ) );
+
+                /*
+                 * Define InputStreams to read from the URLConnection.
+                 */
+                InputStream in = c.getInputStream();
+
+                /*
+                 * Let's make a LogCat entry:
+                 */
+                Log.d("MP3Downloader", "downloading: " + path + fileName);
+
+                /*
+                 * Read bytes to the Buffer until there is nothing more to read(-1).
+                 */
+
+                byte[] buffer = new byte[1024];
+                
+                Integer [] est = new Integer[2];
+            	est[1] = ContentLength/800; //No Fucking Clue!!!
+                int x = 0;
+                int len1 = 0;
+
+            	while ( ( len1 = in.read(buffer) ) > 0) {
+                	f.write(buffer,0,len1);
+                	est[0] = (int) x++;
+                    //Log.d("MP3Downloader", "downloading: " + x);
+                    publishProgress(est);
+                }
+
+                f.close();
+
+        	} catch (IOException e) {
+                    Log.d("MP3Downloader", "Error 1: " + e);
+            }
+
+    		// TODO Auto-generated method stub
+    		return null;
+    	}	
+
+    }
+
+}

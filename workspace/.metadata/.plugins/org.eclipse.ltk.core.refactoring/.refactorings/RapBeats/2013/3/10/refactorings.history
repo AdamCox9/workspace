@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MediaCenter.java&apos; to &apos;RapBeatsPro/src/com.adamcox.rapbeatspro&apos;&#x0D;&#x0A;- Original project: &apos;RapBeats&apos;&#x0D;&#x0A;- Destination element: &apos;RapBeatsPro/src/com.adamcox.rapbeatspro&apos;&#x0D;&#x0A;- Original element: &apos;com.adamcox.rapbeats.MediaCenter.java&apos;" description="Copy compilation unit" destination="=RapBeatsPro/src&lt;com.adamcox.rapbeatspro" element1="/src&lt;com.adamcox.rapbeats{MediaCenter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1362773590477" units="1" version="1.0"/>
+</session>

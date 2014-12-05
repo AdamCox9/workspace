@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;raw&apos;&#x0D;&#x0A;- Original project: &apos;android-ffmpeg-java&apos;&#x0D;&#x0A;- Destination element: &apos;raw&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     libffmpeg.so&#x0D;&#x0A;     libsox.so" description="Copy files" element1="libs/armeabi/libffmpeg.so" element2="libs/armeabi/libsox.so" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1394841295166" target="/RapBeats/res/raw" units="0" version="1.0"/>
+</session>

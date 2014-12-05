@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:keepScreenOn="true"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:weightSum="1">
+    <TextView
+        android:id="@+id/standard_controls_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Freestyle"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/song_title" 
+    	android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <TableLayout 
+    	android:id="@+id/media_table" 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent">
+        <TableRow 
+        	android:id="@+id/recording_controls" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	android:paddingTop="10dp"
+        	android:paddingBottom="20dp">
+            <ImageView 
+                android:contentDescription="Record"
+            	android:padding="5dp"
+            	android:src="@drawable/record"
+            	android:id="@+id/record"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Play Recording"
+            	android:padding="5dp" 
+            	android:src="@drawable/play_recording" 
+            	android:id="@+id/play_recording" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Stop Recording"
+            	android:padding="5dp" 
+            	android:src="@drawable/stop_recording" 
+            	android:id="@+id/stop_recording" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
