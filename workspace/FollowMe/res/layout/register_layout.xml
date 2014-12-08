@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent" 
+              android:layout_height="fill_parent"
+              android:orientation="vertical" android:weightSum="1">
+    <TextView android:text="Choose a Username:" android:layout_width="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/editText1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <requestFocus></requestFocus>
+    </EditText>
+    <TextView android:text="Choose a Password:" android:layout_width="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/editText2" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"></EditText>
+    <TextView android:text="Re-type Password:" android:layout_width="wrap_content" android:id="@+id/textView3" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/editText3" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"></EditText>
+    <TextView android:text="E-mail:" android:layout_width="wrap_content" android:id="@+id/TextView01" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/EditText01" android:layout_width="match_parent" android:inputType="textEmailAddress" android:layout_height="wrap_content"></EditText>
+    <TextView android:text="Retype E-mail:" android:layout_width="wrap_content" android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/editText4" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"></EditText>
+    <Button android:id="@+id/register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account!" />
+     <ImageView android:id="@+id/image"
+         android:layout_width="wrap_content" android:layout_height="wrap_content"
+         android:paddingLeft="4dip" android_paddingRight="4dip"
+         android:src="@drawable/violet" />
+         
+</LinearLayout>

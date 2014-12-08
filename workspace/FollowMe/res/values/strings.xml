@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Follow Me</string>
+    <string name="back">Back</string>
+    <string name="clear">Clear</string>
+    <string name="submit">Submit</string>
+    <string name="ok">OK</string>
+    <string name="main_label">Enter a text entry</string>
+    
+</resources>
