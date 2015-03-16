@@ -1,0 +1,236 @@
+/*****
+	Building Fedora 21
+*****/
+
+yum update -y
+yum install nano mlocate -y
+updatedb
+
+tar -zcvf dir.tar.gz /path/to/dir
+tar -zxvf dir.tar.gz
+
+/*****
+	Format the Drive
+ *****/
+
+fdisk -l
+fdisk /dev/xvdb
+mkfs -t ext3 /dev/xvdb1
+
+/*****
+	Mount the Drive
+ *****/
+
+fdisk -l
+mkdir /mnt/vol
+mount /dev/xvdb1 /mnt/vol
+nano -wS /etc/fstab
+	/dev/xvdb1 /mnt/vol ext3 defaults,noatime,_netdev,nofail 0 2
+
+/*****
+	Web Server
+ *****/
+
+yum groupinstall -y "Web Server" "MySQL Database" "PHP Support"
+yum install -y php-simplexml php-mysql
+nano -wS /etc/httpd/conf/httpd.conf
+	ErrorDocument 404 /not-found.html
+apachectl start
+chkconfig httpd on
+systemctl list-unit-files
+ln -s target_path link_path
+tail -f -n 222 /var/log/httpd/access_log
+tail -f -n 222 /var/log/httpd/error_log
+chmod -R 777 /mnt/vol2/cache
+
+/*****
+	IP Tables
+	/etc/sysconfig/iptables-config
+ *****/
+
+iptables -L
+iptables -F
+
+iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 25 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 465 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 110 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 995 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 143 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 993 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P INPUT DROP
+iptables -L -n
+
+#save & restore
+iptables-save > /etc/sysconfig/iptables
+iptables-restore < /etc/sysconfig/iptables
+
+#Load on start-up:
+nano -wS /etc/rc.d/rc.local
+	/sbin/iptables-restore < /etc/sysconfig/iptables
+	
+
+/*****
+	Database
+ *****/
+
+yum install mysql mysql-devel mysql-server -y
+service mysqld start
+mysqladmin -u root password 123233abc
+chkconfig mysqld on
+
+#for back up
+mysqldump --opt -u [uname] -p[pass] [dbname] > [backupfile.sql]
+
+
+/*****
+	Github - Get the public and private key from github.com
+ *****/
+
+yum install github -y
+git config --global user.email "adam.cox9@gmail.com"
+git config --global user.name "Adam Cox"
+
+nano -wS /root/.ssh/github_rsa
+nano -wS /root/.ssh/github_rsa.pub
+chmod 400 /root/.ssh/github_rsa
+nano -wS ~/.ssh/config
+  Host github.com
+  IdentityFile ~/.ssh/github_rsa
+git clone git@github.com:AdamCox9/8d8apps.git
+git config --global user.name "AdamCox9"
+git config --global user.email "adam.cox9@gmail.com"
+git clone git@github.com:AdamCox9/8d8apps.git
+git clone git@github.com:AdamCox9/8d8apps.git
+
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,FB00E32A6B7CFFB8DC2EB9BE23459081
+
+FVEwxLP4llLNlVBcG0Ffzju2/Y9OfB32VNm3gMBMPl2XgsnfEHSPXofNLLAKu+GI
+ROeQggn3McQ5SHlo0B88/sQ8uoubGUGo2bqAliMJcCF1hXgBFuLJu2SnWjMHlMp6
+5ks2BsCUxjumHUAV31ayEFv7HYO99jEsYIHZb/VrikraUyb2C65Sq11ojqVCLXzI
+oUk5DgPzXSu71t28BQKwMxb0oiZLhWgVFB+Ts6AVZZJ8NMoZA1uWxazhFlrpMaZe
+NwofMdcKTXbCF68dYOkLch/Bjq+eYusgBO/cVj7O7PrP/zpzuMgVOC9pu2MOjyD0
+3OZb6hqkWFvnsdER8chqYOta4q14jgOpQ3zPUn7TG+ZadqlwwgSzVf9lBh3FSnlc
+HVTgQCT4EiSOgJTP/mk/Cu0L3M/rO9okh8EOULbA//+YuUovjZWVIOYRA93LhfwH
+cVgw5CSbqjpADGPF6mvJfkArR3n0VQvkv52lnHEHbkct4N3q1OCJgpZw2mhQjiVH
+2mS6hozwkJcLFAvgSDmBAakaq68RDvuqL40zIFMwRz6eVg2k3qJrh1r2Zs2ix+R6
+NR1DLNdNI68D1BantXg3dMaRXD9R85YMkqWZVeGgLTp4PEOFC6XS8Rk0M1FL4it9
+Qy7nY40T9gqP2W9T3uoWz750wo62W64yJI9NXhCDuMdfNQCQkt7ULoBT5t0TW5pK
+5lwVs2mKz9yP5n1wrJQdXW/gwKZr8+0sUN9wC1/oWrulQPokzeYpyFreFZa1EjAE
+Jt6oR7pS6VZXVDObP3TxQ/s59ikmtIeILdYokm3JAkt9UMgJgKqiIXCqArq45/J4
+rqAAQ2rMiuwSLARwwFabZsW60KRxPyrgUH3bPdZHVAjJZrNIZWkvSQTQJ2nFWLKA
+V1Mt76lJBJfjdA6Jt8X8Fap3tGQuaSAXpLH3/MGjrZauKSKiBthg9UOoYhEI2Iks
+UvoROoc1o43zqxy6+k8mSvScqOIgjPcu5btdjmEIa9/tOwuKKhyhZaYW4XNs1kYX
+Q21cwtoi1j8dnkiK8isoQURgmuvXGpNqBhEBdNvOwqF7tPEGFAMWYsT4hlO05lQ5
+EWsV7E9BCfGx2XgDjVGpNbd5FQ86p76lG5AmX9QoPaZu2sYspLPVS+0yklVboCsP
+pIeUHKR6QIEz0DL28NCBwW6AsmFsA3gY5q41n/59hjpFR1d9J+/cOW/5rq5sSghU
+TA7BTT1L8VsaX/E1XZWrkPmA/1lG8lbPKoqNqP65/PWwsfleY9nJY0ScVd7wc2rt
+tkK1SacoFe6aJy5/xYwLRdgtTIGvm3EMy0vNJDAWSXSN4HHTDzbNXRXu2gzZ/DXd
+qWAwZB+JZbFWeRpms3hkH9OK4nd2jlUR8mzxMVK/2HY1v71G5MgMZFZgZhCJ+UAu
+tW3JzzoR7A+NWlafCPIs9lO0HBQ4n2jMat+VicBi1jkzkFLMkmD+WzWDtd2UDy7h
+SZ26eRvhrAtW0+3a/K/EM4/OmbxT2sRwC+/3dQUlQ5ovK7AzJ0KVAodjg3CXGJhF
+MYMBb9CATb49MLZOV0UlPqJRGmi/x6BbQSMIW8HC51S6JPD/dtmG+/3pffL4AvUz
+-----END RSA PRIVATE KEY-----
+
+#public key:
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpcEw8cW3anzntlsb0Pa3MMTSLeDuCUDHhNilwcMnoJKYoXd89LyUrqf8eDzNXTAZSwkjnDKWpa6oR3c04ASkYXhoMhBptLpOjYYW9x4GklYMjRGgMkdc0nIJkZ4OE4R5QprKSLo9G/ORu3Afm58GfFgi7UmW5wte8GBkG8NTU5OvmS6Po36EQKRGkI+86KhOG5jWSl7bcM2b/oEU0FvikwmZkV/92VHZpA460G/z/0COwmfb1U5tG/LXGxz3aAtBLxtqkak9BmLcFtigZWPmZkHSoyCt9ubCbWKZtXSe0De8WFjpMyjVJyN5d1I50WAqc8UWxJAulcfVMQrycxyu5 adam.cox9@gmail.com
+
+/*****
+
+	Swap
+
+ *****/
+
+dd if=/dev/zero of=/swapfile bs=1024 count=2097152
+mkswap /swapfile
+swapon /swapfile
+nano -wS /etc/fstab
+	/swapfile swap swap defaults 0 0
+free
+cat /proc/swaps
+
+/*****
+
+	HTTPS
+	C:\Users\adam\Google Drive\Folders\Passwords\SSL Certificates
+
+ *****/
+
+yum install mod_ssl openssl
+openssl genrsa -out ca.key 2048
+openssl req -new -key ca.key -out ca.csr
+openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+cp ca.crt /etc/pki/tls/certs/
+cp ca.key /etc/pki/tls/private/
+cp ca.csr /etc/pki/tls/private/
+nano -wS /etc/httpd/conf.d/ssl.conf
+	### overwrite the following parameters ###
+	SSLCertificateFile /etc/pki/tls/certs/ca.crt
+	SSLCertificateKeyFile /etc/pki/tls/private/ca.key
+
+	### The following parameter does not need to be modified in case of a self-signed certificate. ###
+	### If you are using a real certificate, you may receive a certificate bundle. The bundle is added using the following parameters ###
+	SSLCertificateChainFile /etc/pki/tls/certs/example.com.ca-bundle
+service httpd restart
+nano -wS /etc/httpd/conf/httpd.conf
+	NameVirtualHost *:80
+	<VirtualHost *:80>
+	    ServerAdmin email@example.com
+	    DocumentRoot /var/www/html/virtual-web
+	    ServerName virtual-web.example.com
+	</VirtualHost>
+	NameVirtualHost *:443
+	<VirtualHost *:443>
+		SSLEngine on
+		SSLCertificateFile /etc/pki/tls/certs/ca.crt
+		SSLCertificateKeyFile /etc/pki/tls/private/ca.key
+		<Directory /var/www/html/virtual-web>
+			AllowOverride All
+		</Directory>
+		ServerAdmin email@example.com
+	DocumentRoot /var/www/html/virtual-web
+	ServerName virtual-web.example.com
+	</VirtualHost>
+#Get certificate from CA and copy it into /etc/pki/tls/certs/ca.crt
+service httpd restart
+#redirect http to https - put redirect line in virtual host for 80:
+nano -wS /etc/httpd/conf/httpd.conf
+	<VirtualHost *:80>
+	    ServerAdmin adam.cox9@gmail.com
+	    DocumentRoot /var/www/html
+	    ServerName bitcoinusd.info
+	    Redirect / https://bitcoinusd.info/
+	</VirtualHost>
+
+/*****
+
+	WordNet 3.0
+
+ *****/
+
+yum install -y gcc tcl tcl_devel tk tk_devel
+tar -zxvf WordNet-3.0.tar.gz
+mv WordNet-3.0 Wordnet30
+cd Wordnet30
+./configure
+make
+make install
+
+/*****
+
+	CRON
+
+ *****/
+
+#TODO
