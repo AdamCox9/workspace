@@ -2,6 +2,10 @@
 	Building Fedora 21
 *****/
 
+rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-*
+
 yum update -y
 yum install nano mlocate -y
 updatedb
@@ -33,8 +37,6 @@ nano -wS /etc/fstab
 
 yum groupinstall -y "Web Server" "MySQL Database" "PHP Support"
 yum install -y php-simplexml php-mysql
-nano -wS /etc/httpd/conf/httpd.conf
-	ErrorDocument 404 /not-found.html
 apachectl start
 chkconfig httpd on
 systemctl list-unit-files
@@ -42,6 +44,25 @@ ln -s target_path link_path
 tail -f -n 222 /var/log/httpd/access_log
 tail -f -n 222 /var/log/httpd/error_log
 chmod -R 777 /mnt/vol2/cache
+
+nano -wS /etc/httpd/conf/httpd.conf
+	ErrorDocument 404 /not-found.html
+	<VirtualHost *:80>
+	    ServerAdmin adam.cox9@gmail.com
+	    ServerName randomthoughts.club:80
+	    ServerAlias www.randomthoughts.club *.randomthoughts.club
+	    DocumentRoot /var/www/randomthoughts.club
+	    ErrorLog logs/randomthoughts.club-error_log
+	    CustomLog logs/randomthoughts.club-access_log common
+	</VirtualHost>
+	<VirtualHost *:80>
+	    ServerAdmin adam.cox9@gmail.com
+	    ServerName 8d8apps.com:80
+	    ServerAlias www.8d8apps.com *.8d8apps.com
+	    DocumentRoot /var/www/www.8d8apps.com
+	    ErrorLog logs/www.8d8apps.com-error_log
+	    CustomLog logs/www.8d8apps.com-access_log common
+	</VirtualHost>
 
 /*****
 	IP Tables
@@ -88,7 +109,7 @@ mysqladmin -u root password 123233abc
 chkconfig mysqld on
 
 #for back up
-mysqldump --opt -u [uname] -p[pass] [dbname] > [backupfile.sql]
+mysqldump --opt -u root -p wpbitcoinusd  > .htdbbackup2.sql
 
 
 /*****
@@ -110,6 +131,9 @@ git config --global user.name "AdamCox9"
 git config --global user.email "adam.cox9@gmail.com"
 git clone git@github.com:AdamCox9/8d8apps.git
 git clone git@github.com:AdamCox9/8d8apps.git
+
+git submodule init 
+git submodule update
 
 -----BEGIN RSA PRIVATE KEY-----
 Proc-Type: 4,ENCRYPTED
@@ -171,9 +195,15 @@ yum install mod_ssl openssl
 openssl genrsa -out ca.key 2048
 openssl req -new -key ca.key -out ca.csr
 openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+
 cp ca.crt /etc/pki/tls/certs/
 cp ca.key /etc/pki/tls/private/
 cp ca.csr /etc/pki/tls/private/
+
+cat /etc/pki/tls/certs/ca.crt
+cat /etc/pki/tls/private/ca.key
+cat /etc/pki/tls/private/ca.csr
+
 nano -wS /etc/httpd/conf.d/ssl.conf
 	### overwrite the following parameters ###
 	SSLCertificateFile /etc/pki/tls/certs/ca.crt
@@ -215,6 +245,29 @@ nano -wS /etc/httpd/conf/httpd.conf
 
 /*****
 
+	Redirect
+
+ *****/
+
+nano -wS /etc/httpd/conf/httpd.conf
+    #Redirect www to non-www
+    <IfModule mod_rewrite.c>
+        Options +FollowSymlinks
+        RewriteEngine On
+        RewriteCond %{HTTPS} !=on
+        RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+        RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+    </IfModule>
+    #Redirect www to non-www
+    <IfModule mod_rewrite.c>
+        Options +FollowSymlinks
+        RewriteEngine On
+        RewriteCond %{HTTP_HOST} !^www\.
+        RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+    </IfModule>
+
+/*****
+
 	WordNet 3.0
 
  *****/
@@ -234,3 +287,22 @@ make install
  *****/
 
 #TODO
+
+/*****
+
+	Use Key to SSH into Server
+
+ *****/
+
+#TODO
+
+/*****
+
+	FFMPEG/SOX
+
+ *****/
+
+yum install ffmpeg ffmpeg-devel ffmpeg-libpostproc sox sox-devel lame lame-devel libid3tag
+yum install libvorbis-devel alsa-lib-devel libtool-ltdl-devel libsamplerate-devel gsm-devel wavpack-devel 
+yum ladspa-devel libpng-devel flac-devel libao-devel libsndfile-devel libid3tag-devel libtool
+yum install sox-plugins-freeworld
