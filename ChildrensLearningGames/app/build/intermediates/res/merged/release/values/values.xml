@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Children\'s Learning Games</string>
+    <string name="center_image">Center Image</string>
+    <string name="colors">Colors</string>
+    <string name="dog">dog</string>
+    <string name="double_zero">00</string>
+    <string name="equals_sign">=</string>
+    <string name="hours">hours</string>
+    <string name="icon_colors">Colors Icon</string>
+    <string name="icon_down">Down Icon</string>
+    <string name="icon_letters">Letters Icon</string>
+    <string name="icon_rate">Rate Icon</string>
+    <string name="icon_shapes">Shapes Icon</string>
+    <string name="icon_sounds">Sounds Icon</string>
+    <string name="icon_spelling">Spelling Icon</string>
+    <string name="icon_up">Up Icon</string>
+    <string name="left_image">Left Image</string>
+    <string name="letter_a">A</string>
+    <string name="minutes">minutes</string>
+    <string name="moon">Moon</string>
+    <string name="next">Next</string>
+    <string name="number_one">1</string>
+    <string name="number_twelve">12</string>
+    <string name="number_two">2</string>
+    <string name="number_zero">0</string>
+    <string name="pictures">Pictures</string>
+    <string name="plus_sign">+</string>
+    <string name="previous">Previous</string>
+    <string name="random">Random</string>
+    <string name="right_image">Right Image</string>
+    <string name="semicolon">:</string>
+    <string name="shapes">Shapes</string>
+    <string name="spell">spell</string>
+</resources>

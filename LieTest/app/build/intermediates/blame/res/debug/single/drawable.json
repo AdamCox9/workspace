@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wave_red.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable\\wave_red.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wave_orange.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable\\wave_orange.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wave_green.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable\\wave_green.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wave_yellow.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable\\wave_yellow.png"
+    }
+]

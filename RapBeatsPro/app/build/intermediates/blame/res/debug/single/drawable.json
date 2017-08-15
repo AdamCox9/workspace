@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\folder48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\folder48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\www48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\www48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\record.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\record.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\freestyle48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\freestyle48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\lockmusic48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\lockmusic48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pause.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\pause.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\upgrade48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\upgrade48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play_recording.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\play_recording.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\play.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stop_down.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\stop_down.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\leave_review.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\leave_review.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stop.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\stop.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\redownload.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\redownload.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stop_recording_down.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\stop_recording_down.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\record_down.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\record_down.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\share.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\share.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\record_active.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\record_active.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\import_beats.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\import_beats.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play_recording_down.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\play_recording_down.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pause_down.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\pause_down.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\save.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\save.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\music48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\music48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\xmusic48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\xmusic48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\make_a_rap.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\make_a_rap.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play_down.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\play_down.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_saved_raps.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\my_saved_raps.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play_lyrics_recording.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\play_lyrics_recording.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stop_recording.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\stop_recording.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\earncredits48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\earncredits48px.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\publishbeats48px.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeatsPro\\app\\src\\main\\res\\drawable\\publishbeats48px.png"
+    }
+]

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:keepScreenOn="true"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:weightSum="1">
+    <TextView 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/song_title" 
+    	android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <TableLayout 
+    	android:id="@+id/media_table" 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent">
+        <TableRow 
+        	android:id="@+id/standard_controls" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content">
+            <ImageView 
+                android:contentDescription="Play"
+            	android:padding="3dp" 
+            	android:src="@drawable/play" 
+            	android:id="@+id/play" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Pause"
+            	android:padding="3dp" 
+            	android:src="@drawable/pause" 
+            	android:id="@+id/pause" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Stop"
+            	android:padding="3dp" 
+            	android:src="@drawable/stop" 
+            	android:id="@+id/stop" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+        </TableRow>
+        <TableRow 
+        	android:id="@+id/recording_controls" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content">
+            <ImageView 
+                android:contentDescription="Record"
+            	android:padding="3dp" 
+            	android:src="@drawable/record" 
+            	android:id="@+id/record" 
+            	android:layout_height="wrap_content"
+            	 android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Play Recording"
+            	android:padding="3dp" 
+            	android:src="@drawable/play_recording" 
+            	android:id="@+id/play_recording" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Play Lyrics Recording"
+            	android:padding="3dp" 
+            	android:src="@drawable/play_lyrics_recording" 
+            	android:id="@+id/play_lyrics_recording" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+            <ImageView 
+                android:contentDescription="Stop Recording"
+            	android:padding="3dp" 
+            	android:src="@drawable/stop_recording" 
+            	android:id="@+id/stop_recording" 
+            	android:layout_height="wrap_content" 
+            	android:layout_width="wrap_content"/>
+        </TableRow>
+        <TableRow 
+        	android:id="@+id/save_controls" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content">
+            <ImageView 
+            	android:padding="3dp" 
+            	android:src="@drawable/save"
+            	android:id="@+id/save"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"/>
+
+            <ImageView 
+            	android:padding="3dp" 
+            	android:src="@drawable/www48px"
+            	android:id="@+id/share"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"/>
+
+            <ImageView 
+            	android:padding="3dp" 
+            	android:src="@drawable/redownload"
+            	android:id="@+id/redownload"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"/>
+        </TableRow>
+    </TableLayout>
+
+<TextView 
+   	android:layout_height="wrap_content" 
+   	android:layout_width="wrap_content" 
+   	android:id="@+id/lyric_offset_text" 
+   	android:text="Lyric Offset" 
+   	android:textAppearance="?android:attr/textAppearanceSmall"
+   	android:paddingTop="3dp"/>
+    
+<SeekBar 
+    android:id="@+id/offset_bar" 
+    android:max="2000"
+    android:progress="550"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp" />
+
+<TextView 
+   	android:layout_height="wrap_content" 
+   	android:layout_width="wrap_content" 
+   	android:id="@+id/beatvol_text" 
+   	android:text="Beat Volume" 
+   	android:textAppearance="?android:attr/textAppearanceSmall"
+   	android:paddingTop="3dp"/>
+    
+<SeekBar
+	android:id="@+id/beatvol_bar"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp" />
+
+<TextView 
+   	android:layout_height="wrap_content" 
+   	android:layout_width="wrap_content" 
+   	android:id="@+id/lyricvol_text" 
+   	android:text="Lyric Volume" 
+   	android:textAppearance="?android:attr/textAppearanceSmall"
+   	android:paddingTop="3dp"/>
+    
+<SeekBar
+ 	android:id="@+id/lyricvol_bar"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp" />
+
+<TextView 
+   	android:layout_height="wrap_content" 
+   	android:layout_width="wrap_content" 
+   	android:id="@+id/headphones_required" 
+   	android:text="*Headphones recommended for recording lyrics" 
+   	android:textAppearance="?android:attr/textAppearanceSmall"
+   	android:paddingTop="0dp"/>
+
+</LinearLayout>

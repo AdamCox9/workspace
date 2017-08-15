@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_group_entries.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\view_group_entries.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\request_to_join_group_layout.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\request_to_join_group_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text_entry.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\text_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register_layout.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\register_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_groups.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\view_groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\picture_entry.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\picture_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_text_entry.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\view_text_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\list.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_entry.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\video_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\create_group_layout.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\create_group_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_entries.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\view_entries.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_layout.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\layout\\login_layout.xml"
+    }
+]

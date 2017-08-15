@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\raw\\libffmpeg.so",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\raw\\libffmpeg.so"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\raw\\battle.mp3",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\raw\\battle.mp3"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\raw\\irish_beat.mp3",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\raw\\irish_beat.mp3"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\raw\\pass_the_dutch.mp3",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\raw\\pass_the_dutch.mp3"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\raw\\libsox.so",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\raw\\libsox.so"
+    }
+]

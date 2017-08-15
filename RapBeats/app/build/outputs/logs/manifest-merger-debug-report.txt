@@ -1,0 +1,183 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:2:1-88:12
+	package
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:5:5-31
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:6:5-35
+uses-sdk
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:7:2-8:43
+	android:targetSdkVersion
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:8:11-40
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:7:12-37
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:9:2-80
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:9:19-61
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:10:2-78
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:10:19-75
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:11:2-68
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:11:19-65
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:12:2-72
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:12:19-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:13:2-94
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:13:19-75
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:14:2-92
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:14:19-73
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:15:2-77
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:15:19-74
+uses-feature#android.hardware.microphone
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:17:2-85
+	android:required
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:17:59-82
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:17:16-58
+application
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:19:2-87:19
+	android:label
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:19:45-77
+	android:icon
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:19:15-44
+activity#com.tapit.adview.AdActivity
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:20:3-22:69
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:22:7-66
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:21:7-49
+activity#com.adamcox.rapbeats.ListRapBeats
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:23:9-28:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:27:13-49
+	android:label
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:25:13-45
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:24:10-38
+activity#com.adamcox.rapbeats.FreeStyle
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:29:9-34:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:33:13-49
+	android:label
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:31:13-45
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:30:10-35
+activity#com.adamcox.rapbeats.WebPublisher
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:35:9-40:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:39:13-49
+	android:label
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:37:13-45
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:38:13-72
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:36:10-38
+activity#com.adamcox.rapbeats.BeatImporter
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:41:9-46:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:45:13-49
+	android:label
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:43:13-45
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:44:13-72
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:42:10-38
+activity#com.adamcox.rapbeats.EarnCredits
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:47:9-52:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:51:13-49
+	android:label
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:49:13-45
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:48:10-37
+activity#com.adamcox.rapbeats.MySavedRaps
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:53:9-57:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:56:13-49
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:55:10-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:54:10-37
+activity#com.adamcox.rapbeats.SavedRapsPlayer
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:58:9-62:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:61:13-49
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:60:10-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:59:10-41
+activity#com.adamcox.rapbeats.Downloader
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:63:9-67:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:66:13-49
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:65:10-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:64:13-39
+activity#com.adamcox.rapbeats.MediaCenter
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:68:9-72:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:71:13-49
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:70:10-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:69:13-40
+activity#com.adamcox.rapbeats.PreLandingPage
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:73:9-81:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:76:13-49
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:75:10-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:74:10-40
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:77:13-80:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:78:17-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:78:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:79:17-77
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:79:27-74
+activity#com.adamcox.rapbeats.LandingPage
+ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:82:9-86:20
+	android:screenOrientation
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:85:13-49
+	android:configChanges
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:84:10-69
+	android:name
+		ADDED from C:\Users\adam\StudioProjects\RapBeats\app\src\main\AndroidManifest.xml:83:10-37

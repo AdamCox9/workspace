@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adamcox.guesstheletter"
+    android:installLocation="auto"
+    android:versionCode="10"
+    android:versionName="1.10" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="11" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.adamcox.guesstheletter.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.adamcox.guesstheletter.DragNDropActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.LearnTheLettersActivity" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.LearnTheNumbersActivity" >
+        </activity>
+        <activity
+            android:name="com.adamcox.guesstheletter.MathActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.LearnTheShapesActivity" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.LearnTheColorsActivity" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.PictureBookActivity" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.SpellingBeeActivity" >
+        </activity>
+        <activity
+            android:name="com.adamcox.guesstheletter.WhatsTheTimeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.SmallMediumLargeActivity" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.PushSoundsActivity" >
+        </activity>
+        <activity android:name="com.adamcox.guesstheletter.DrumMachineActivity" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,7 @@
+#Mon Aug 14 19:54:23 EDT 2017
+base.0=C\:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f6cf98c19d5641065fcd7aa015b8ca580d9f08a
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f6f08bf0b45fb9a60cc209f5c5942d9d606ed768\\classes.dex
+base.1=C\:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f6f08bf0b45fb9a60cc209f5c5942d9d606ed768
+file.0=C\:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f6cf98c19d5641065fcd7aa015b8ca580d9f08a\\classes.dex

@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\freestyle.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\freestyle.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\earn_credits.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\earn_credits.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\import_beats.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\import_beats.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\my_saved_raps.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\my_saved_raps.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\landing_page.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\landing_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\list.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\media.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\media.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\saved_raps_player.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\saved_raps_player.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\download.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\download.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\RapBeats\\app\\src\\main\\res\\layout\\custom_dialog.xml"
+    }
+]

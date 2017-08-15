@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\wave_green.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable-ldpi\\wave_green.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\wave_yellow.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable-ldpi\\wave_yellow.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\wave_red.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable-ldpi\\wave_red.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\icon.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\wave_orange.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\LieTest\\app\\src\\main\\res\\drawable-ldpi\\wave_orange.png"
+    }
+]

@@ -1,0 +1,21 @@
+#Internal package file, do not edit.
+#Mon Aug 14 19:37:34 EDT 2017
+2.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+5.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+5.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+2.set=ANDROID_RESOURCE
+4.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e3fc5f172040be5b64ddfe359000718d6bb2bdbc
+count=6
+0.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_63eb3f58cd50a6c8a02535cc261c22f93d78f4c3\\classes.dex
+5.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.set=DEX
+1.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+1.set=ANDROID_RESOURCE
+2.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
+0.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_63eb3f58cd50a6c8a02535cc261c22f93d78f4c3
+3.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\icon.png
+3.set=ANDROID_RESOURCE
+1.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e3fc5f172040be5b64ddfe359000718d6bb2bdbc\\classes.dex
+0.set=DEX

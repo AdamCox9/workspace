@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mobile.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\drawable\\mobile.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_entry.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\drawable\\text_entry.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\group.png",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\drawable\\group.png"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\violet.jpg",
+        "source": "C:\\Users\\adam\\StudioProjects\\FollowMe\\app\\src\\main\\res\\drawable\\violet.jpg"
+    }
+]

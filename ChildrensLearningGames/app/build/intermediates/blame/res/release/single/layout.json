@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\domath.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\domath.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\smallmediumlarge.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\smallmediumlarge.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\whatsthetime.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\whatsthetime.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\picturebook.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\picturebook.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\download.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\download.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\learnthenumbers.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\learnthenumbers.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\learntheletters.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\learntheletters.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\dragndrop.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\dragndrop.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\learnthecolors.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\learnthecolors.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\gridview_item.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\gridview_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\main.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\learntheshapes.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\learntheshapes.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\spellingbee.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\spellingbee.xml"
+    },
+    {
+        "merged": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc.xml",
+        "source": "C:\\Users\\adam\\StudioProjects\\ChildrensLearningGames\\app\\src\\main\\res\\layout\\abc.xml"
+    }
+]

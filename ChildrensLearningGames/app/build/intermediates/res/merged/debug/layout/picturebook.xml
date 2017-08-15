@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+     <ImageView 
+        android:contentDescription="@string/pictures"
+         android:id="@+id/picture_image"
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content"
+         android:paddingLeft="4dip" 
+         android:paddingRight="4dip"
+         android:src="@drawable/picture_moon"
+         android:layout_gravity="center" />
+       <TextView 
+           android:padding="5dip" 
+           android:textSize="35sp" 
+           android:textColor="#800080"
+           android:layout_width="wrap_content" 
+           android:id="@+id/pictureText" 
+           android:textAppearance="?android:attr/textAppearanceLarge" 
+           android:layout_height="wrap_content" 
+           android:text="@string/moon" 
+           android:layout_gravity="center">
+       </TextView>
+     <Button 
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content" 
+         android:id="@+id/next_picture_button" 
+         android:text="@string/next"
+         android:layout_marginTop="10sp"
+         android:layout_gravity="center">
+     </Button>
+</LinearLayout>

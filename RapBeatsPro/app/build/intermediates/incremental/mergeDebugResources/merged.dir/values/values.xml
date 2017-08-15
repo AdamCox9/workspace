@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="app_is_pro">true</bool>
+    <string name="app_name">Rap Beats Pro</string>
+    <string name="app_version">com.adamcox.rapbeatspro</string>
+    <string name="m_host">http://www.8d8apps.com/</string>
+    <string name="upgrade">Install Rap Beats Pro to get 125+ rap beats for only $3.99.</string>
+</resources>

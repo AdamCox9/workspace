@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#f00</color>
+    <drawable name="semi_black">#80000000</drawable>
+    <string name="app_name">Follow Me</string>
+    <string name="back">Back</string>
+    <string name="clear">Clear</string>
+    <string name="main_label">Enter a text entry</string>
+    <string name="ok">OK</string>
+    <string name="submit">Submit</string>
+    <style name="ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.ActionButton</item>
+    </style>
+    <style name="TextAppearance" parent="android:TextAppearance">
+    </style>
+    <style name="TextAppearance.ActionButton">
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>

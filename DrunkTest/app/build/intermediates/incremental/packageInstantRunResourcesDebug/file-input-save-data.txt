@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Mon Aug 14 19:37:26 EDT 2017
+1.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
+2.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.set=ANDROID_RESOURCE
+2.set=ANDROID_RESOURCE
+2.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\icon.png
+count=4
+1.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+0.set=ANDROID_RESOURCE
+0.base=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+0.file=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc

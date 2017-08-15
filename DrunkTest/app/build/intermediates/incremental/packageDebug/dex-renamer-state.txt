@@ -1,0 +1,7 @@
+#Mon Aug 14 19:37:34 EDT 2017
+base.0=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_63eb3f58cd50a6c8a02535cc261c22f93d78f4c3
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e3fc5f172040be5b64ddfe359000718d6bb2bdbc\\classes.dex
+base.1=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e3fc5f172040be5b64ddfe359000718d6bb2bdbc
+file.0=C\:\\Users\\adam\\StudioProjects\\DrunkTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_63eb3f58cd50a6c8a02535cc261c22f93d78f4c3\\classes.dex
